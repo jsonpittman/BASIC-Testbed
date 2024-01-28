@@ -1,0 +1,45 @@
+Directory of: Disks/1991_06A.DSK,
+
+ FALSOFT \217\217\217  2  B  1
+PRESENTS \217\217\217  2  B  1
+ RAINBOW \217\217\217  2  B  1
+   ON    \217\217\217  2  B  3
+  DISK   \217\217\217  2  B  1
+MENU     BAS  0  B  2
+NOTE2X40 BAS  0  B  2
+HIRESPIE BAS  0  B  1
+CARQUEST BAS  0  B  1
+SLOT     BAS  0  B  1
+MKDAT    BAS  0  B  1
+MKMOD    BAS  0  B  1
+RESET    DAT  0  B  1
+FIXES    DAT  0  B  1
+FIXES    ASM  3  A  1
+ERROR    DAT  0  B  1
+ERROR    ASM  3  A  1
+CMDS     DAT  0  B  1
+CMDS     ASM  3  A  3
+UTIL     DAT  0  B  1
+UTIL     ASM  3  A  3
+DISK     DAT  0  B  1
+DISK     ASM  3  A  2
+COPY     DAT  0  B  1
+COPY     ASM  3  A  2
+DIR      DAT  0  B  1
+DIR      ASM  3  A  3
+CONFIG   BAS  0  B  1
+SAMPLE   CFG  0  B  1
+TPL      BAS  0  B  1
+UNLOAD   BAS  0  B  1
+GENDMENU BAS  0  B  6
+GENSTR   BAS  0  B  1
+GENMLT   BAS  0  B  2
+GENMLE   BAS  0  B  2
+SORTDRV  BAS  0  B  1
+SORT     DAT  1  A  1
+SORT     BIN  2  B  1
+SCREEN51 BAS  0  B  2
+MAKEBRAK BAS  0  B  4
+WORDPUZL BAS  0  B  1
+WDPUZZLE BIN  2  B  1
+WDPUZZLE ASM  3  A  3

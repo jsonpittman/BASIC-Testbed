@@ -1,0 +1,14 @@
+0 '****************************   '*COPYRIGHT 1990 FALSOFT INC*
+1 '*    BORDER COLOR CHANGE   *
+2 '*       FOR COCO III       *
+3 '*   BY ANDREW B. BARTELS   *
+4 '*    COPYRIGHT (C) 1986    *
+5 '****************************
+6 '*EXEC&H7FD1 TO ENABLE      *
+7 '*EXEC&H7FDE TO DISABLE IT  *
+8 '*POKE32720,X - X IS FROM   *
+9 '* 0 TO 63 TO SELECT COLOR  *
+10 '***************************
+11 CLEAR200,&H7FCF:WIDTH40:FORX=&H7FD0 TO &H7FF4:READA$:POKEX,VAL("&H"+A$):NEXT
+12 DATA0,BE,1,D,BF,7F,F3,8E,7F,E5,BF,1,D,39,BE,7F,F3,BF,1,D,39,34,2,B6,7F,D0,B7,FF,9A,35,2,6E,9F,7F,F3,0,0
+13 EXEC&H7FD1

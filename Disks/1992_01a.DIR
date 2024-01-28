@@ -1,0 +1,26 @@
+Directory of: Disks/1992_01a.DSK,
+
+ FALSOFT \217\217\217  2  B  1
+PRESENTS \217\217\217  2  B  1
+ RAINBOW \217\217\217  2  B  1
+   ON    \217\217\217  2  B  3
+  DISK   \217\217\217  2  B  1
+MENU     BAS  0  B  2
+MILLDRV  BAS  0  B  1
+MILL     BIN  2  B  1
+MILL     ASM  3  A  4
+DIRECT   BAS  0  B  3
+XMASHOME BAS  0  B  1
+POKETEXT BAS  0  B  1
+DISKTABL BAS  0  B  1
+DESPACE  BAS  0  B  1
+SCREEN   BAS  0  B  1
+CHKDSK   BAS  0  B  1
+CAMERA   BAS  0  B  1
+NUMBERS  BAS  0  B  1
+TC12     BIN  2  B  2
+TC3      BIN  2  B  2
+TC31     BIN  2  B  2
+TC12     DOC  1  A  1
+TC3      DOC  1  A  1
+TC31     DOC  1  A  1

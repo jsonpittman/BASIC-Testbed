@@ -1,0 +1,54 @@
+0 ' COPYRIGHT 1989  FALSOFT,INC
+10 CLS:CLEAR:CLEAR 10000:FILES 3,2000
+20 RESTORE
+30 OPEN"D",#1,"WORDLIST/DAT",51:FIELD#1,20AS A$,20AS B$,11AS C$
+100 I=LOF(1):FOR J=1 TO 200:I=I+1
+110 CC$=STRING$(11,CHR$(0))
+120 READ A1$,A2$,A3$:PRINT@32*12,A1$:PRINT@32*13,A2$:PRINT@32*14,A3$
+130 IF A1$=""THEN390
+140 PRINT@64,I;"    ";J:PRINT@128,A1$:PRINT@160,A2$:PRINT@192,A3$
+150 MID$(CC$,4,1)=CHR$(VAL(A3$))
+160 L1=FIX((I-1)/256):L2=I-1-256*L1:MID$(CC$,8,1)=CHR$(L1):MID$(CC$,9,1)=CHR$(L2)
+170 N1=FIX((I+1)/256):N2=I+1-256*N1:MID$(CC$,10,1)=CHR$(N1):MID$(CC$,11,1)=CHR$(N2)
+210 IF A2$=""THEN A2$=A1$
+220 LSET A$=A1$:LSET B$=A2$:LSET C$=CC$
+230 PUT #1,I:NX$=LEFT$(A1$,1)
+240 IF A1$="ZOOM"THEN300
+250 NEXT J
+300 E=LOF(1)
+310 X1=FIX(E/256):X2=E-256*X1
+320 GET #1,1:CC$=C$
+330 MID$(CC$,8,1)=CHR$(X1):MID$(CC$,9,1)=CHR$(X2)
+340 LSET C$=CC$
+350 PUT #1,1
+360 GET #1,E
+370 MID$(CC$,10,1)=CHR$(0):MID$(CC$,11,1)=CHR$(1)
+380 PUT #1,E
+390 CLS:PRINT"DONE !":END
+500 KILL"NX$+"/BAS"
+510 N=INSTR(1,LT$,NX$)
+520 NX$=MID$(LT$,N+1,1)
+530 LOAD NX$,R
+1000 DATA "AARDVARK            ","ARDVARK             "," 8"
+1010 DATA "ABANDON             ",""," 4"
+1020 DATA "ANYWHERE            ","ANYWHARE            "," 5"
+1030 DATA "BIOLOGY             ","BI OLOGY            "," 6"
+1040 DATA "BOUGHT              ",""," 4"
+1050 DATA "CABBAGE             ","CABBIDGJH           "," 6"
+1060 DATA "CARRIAGE            ","CARRIDGJHH          "," 7"
+1070 DATA "CEREAL              ","CEAREEUL            "," 4"
+1080 DATA "CONSTITUTION        ",""," 6"
+1090 DATA "DIAMETER            ","DI AEMUHTER         "," 6"
+1100 DATA "DOZEN               ","DOZZEN              "," 6"
+1110 DATA "FAILURE","FAILL URE"," 5"
+1120 DATA "FISSION             ","FIZZION             "," 6"
+1130 DATA "GEOGRAPHY           ",""," 6"
+1140 DATA "LEGISLATURE         ","LEGIS LAITURE       "," 7"
+1150 DATA "PLATEAU             ","PLAET O             "," 7"
+1160 DATA "RADIUS              ","RAIDEE US           "," 5"
+1170 DATA "SENATE              ","SENNUT              "," 6"
+1180 DATA "SURGEON             ","SURDGUN             "," 7"
+1190 DATA "WHISTLE             ","WHISSEL             "," 5"
+1200 DATA "WRINKLE             ","REENKEL             "," 5"
+1210 DATA "ZOOM                ","ZOOM                "," 4"
+1220 DATA ,,

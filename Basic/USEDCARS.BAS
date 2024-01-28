@@ -1,0 +1,77 @@
+10 REM $$$$$$$$$$$$$$$$$$$$$$$$$
+20 REM $$$     USED CARS     $$$
+30 REM $$$        BY         $$$
+40 REM $$$ RICHARD K.JOHNSON $$$
+50 REM $$$  826 ELMWOOD AVE. $$$
+60 REM $$$   NEW ALBANY,IN.  $$$
+70 REM $$$       47150       $$$
+80 REM $$$     APRIL 88      $$$
+90 REM $$$$$$$$$$$$$$$$$$$$$$$$$
+100 CLS:PRINT@101,"$$$$$$$$$$$$$$$$$$$$$$"
+110 PRINT@133,"$                    $"
+120 PRINT@165,"$     USED CARS      $"
+130 PRINT@197,"$                    $"
+140 PRINT@229,"$        BY          $"
+150 PRINT@261,"$                    $"
+160 PRINT@293,"$ RICHARD K. JOHNSON $"
+170 PRINT@325,"$                    $"
+180 PRINT@357,"$$$$$$$$$$$$$$$$$$$$$$"
+190 FORP=1TO2000:NEXTP
+200 CLS:PRINT"SET PAPER TO TOP OF PRINTER HEAD"
+210 PRINT"  WHEN PRINTER IS ON LINE PRESS           <<<ENTER>>>"
+220 EXEC44539
+230 IF INKEY$=CHR$(13)THEN 240ELSE200
+240 CLS:INPUT"HOW MANY COPIES (1-5)";C
+250 IFC<1 OR C>5 THEN240 ELSE260
+260 PR=1
+270 POKE150,87'POKE FOR 600 BAUD RATE FOR RADIO SHACK DMP 105 PRINTER
+280 FORPR=1 TO C
+290 CLS:PRINT@234,"NOW PRINTING"
+300 A$="USED CARS"
+310 PRINT#-2,CHR$(27);CHR$(14);TAB((45-LEN(A$))/2);A$;CHR$(10);CHR$(10)
+320 PRINT#-2,CHR$(27);CHR$(15);CHR$(15);CHR$(27);CHR$(19);"DEALER                                   OWNER                               "
+330 PRINT#-2,CHR$(10);"ADDRESS                                  ADDRESS                             "
+340 PRINT#-2,CHR$(10);"TEL.                                     TEL.                                "
+350 PRINT#-2,CHR$(10);"ASKING PRICE                LOWEST PRICE              YOUR OFFER             "
+360 PRINT#-2,CHR$(10);"MAKE            ",+"MODEL          ",+"STYLE (2DR) (4DR) WAGON       "
+370 PRINT#-2,CHR$(10);"YEAR          ",+"MILEAGE           ",+"COLOR                        ":PRINT#-2,CHR$(14)
+380 PRINT#-2,TAB(1);"(4)-(6)-(8)CYL";:PRINT#-2,TAB(30);"()TURBOCHARGED";:PRINT#-2,TAB(60);"()FUEL INJECTION"
+390 PRINT#-2,TAB(1);"() FRONT WHEEL DRIVE";:PRINT#-2,TAB(30);"() REAR WHEEL DRIVE";:PRINT#-2,TAB(60);"() FOUR WHEEL DRIVE"
+400 B$="OPTIONS"
+410 PRINT#-2,CHR$(10);CHR$(27);CHR$(14);TAB((47-LEN(B$))/2);B$:PRINT#-2,CHR$(27);CHR$(15)
+420 PRINT#-2,TAB(1);"() AUTOMATIC TRANS";:PRINT#-2,TAB(30);"() MANUAL TRANS";:PRINT#-2,TAB(60);"() FLOOR SHIFT"
+430 PRINT#-2,TAB(1);"() AIR-COND ";:PRINT#-2,TAB(30);"() POWER STEERING ";:PRINT#-2,TAB(60);"() POWER BRAKES "
+440 PRINT#-2,TAB(1);"() POWER WINDOWS ";:PRINT#-2,TAB(30);"() POWER DR.LOCKS ";:PRINT#-2,TAB(60);"() POWER SEATS "
+450 PRINT#-2,TAB(1);"() TILT STEERING";:PRINT#-2,TAB(30);"() CRUISE CONTROL";:PRINT#-2,TAB(60);"() REAR DEFROSTER"
+460 PRINT#-2,TAB(1);"() AM/FM RADIO";:PRINT#-2,TAB(30);"() AM/FM STEREO";:PRINT#-2,TAB(60);"() AM/FM STEREO/TP"
+470 PRINT#-2,TAB(1);"() VINYL ROOF";:PRINT#-2,TAB(30);"() SUN ROOF/T-TOP";:PRINT#-2,TAB(60);"() LANDAU ROOF"
+480 PRINT#-2,TAB(1);"() TINTED GLASS";:PRINT#-2,TAB(30);"() BODY TRIM";:PRINT#-2,TAB(60);"() TRIP COMPUTER"
+490 PRINT#-2,TAB(1);"() ANTILOCK BRAKES";:PRINT#-2,TAB(30);"() THEFT DETERRENT";:PRINT#-2,TAB(60);"() RUSTPROOFING"
+500 PRINT#-2
+510 PRINT#-2,CHR$(15);"OTHER OPTIONS                                                                   "
+520 PRINT#-2:PRINT#-2,"                                                                                "
+530 PRINT#-2:PRINT#-2,"                                                                                "
+540 PRINT#-2:PRINT#-2,"COMMENTS                                                                        "
+550 PRINT#-2:PRINT#-2,"                                                                                "
+560 PRINT#-2:PRINT#-2,"                                                                                "
+570 PRINT#-2:PRINT#-2,"                                                                                "
+580 PRINT#-2,CHR$(14)
+590 C$="OBSERVATIONS"
+600 PRINT#-2,CHR$(27);CHR$(14);TAB((44-LEN(C$))/2);C$:PRINT#-2,CHR$(27);CHR$(15)
+610 PRINT#-2,CHR$(27);CHR$(19);"HOW DOES THE PAINT LOOK? ()NEW ()GOOD ()FAIR ()BEEN TOUCHED UP"
+620 PRINT#-2,"HOW DO THE TIRES LOOK? ()NEW ()GOOD ()WORN ON ONE SIDE OR THE OTHER"
+630 PRINT#-2,"ARE THERE ANY SCRATCHES OR DENTS? ()YES ()NO"
+640 PRINT#-2,"HAS THIS CAR EVER BEEN WRECKED? ()YES ()NO**IF YES WHAT PART OF CAR?"
+650 PRINT#-2,"HOW DOES THE INTERIOR LOOK? ()VERY GOOD ()GOOD ()FAIR**DOES IT SMELL MUSTY ()YES ()NO
+660 PRINT#-2,"HOW DOES THE ENGINE SOUND?** ARE THERE ANY ODD NOISES? ()YES ()NO"
+670 PRINT#-2,"ARE THERE ANY LEAKS UNDER THE CAR? ()YES ()NO** IF YES,WHERE ARE THEY COMING    FROM?"
+680 PRINT#-2,"DOES THE TRANSMISSION SHIFT SMOOTHLY? ()YES ()NO"
+690 PRINT#-2,"DO THE BRAKES PULL TO ONE SIDE OR THE OTHER? ()YES ()NO"
+700 PRINT#-2,"DOES THE STEERING WORK OK? ()YES ()NO"
+710 PRINT#-2,"HOW IS THE SUSPENSION?**DO THE SHOCKS AND SPRINGS SEEM TO BE OK? ()YES ()NO"
+720 PRINT#-2,"IS THERE A WARRANTY ON THE CAR? ()YES ()NO **IF YES HOW LONG AND WHAT IS COVEREDBY THIS WARRANTY?"
+730 PRINT#-2,"IS THERE A REPAIR RECORD FOR THIS CAR? ()YES ()NO"
+740 PRINT#-2,"DO YOU KNOW OF ANYTHING THAT IS WRONG WITH THIS CAR? ()YES ()NO**IF YES WHAT?"
+750 NEXTPR
+760 CLS:PRINT@236,"GOOD LUCK"
+770 PRINT#-2:PRINT#-2:PRINT#-2:PRINT#-2

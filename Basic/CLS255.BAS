@@ -1,0 +1,12 @@
+2  'CLS 255   By Lee Deuell, (C) 8-12-88
+12  RGB:WIDTH 40
+16  Y=1
+20  ON BRK GOTO 44
+24  POKE &HF6BC,255
+28  FOR X=Y TO 255
+32  CLS X
+36  EXEC 44539
+40  NEXT X
+44  LOCATE 13,10:PRINT "This is CLS" X;:PRINT CHR$(8);:PRINT".":LOCATE 1,21:        PRINT "Press C to continue or any key to end.
+48  EXEC 44539:I$=INKEY$: IF I$= "" THEN 48
+54  IF I$= "C" THEN Y=X + 1:GOTO 28
